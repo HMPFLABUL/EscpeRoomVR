@@ -104,17 +104,17 @@
     <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardAndroidDevice.cs" />
     <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
     <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
-    <Compile Include="Assets\Game\Scripts\BigObject.cs" />
-    <Compile Include="Assets\Game\Scripts\DataPlayer.cs" />
-    <Compile Include="Assets\Game\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Game\Scripts\Item.cs" />
-    <Compile Include="Assets\Game\Scripts\MakroItemMenager.cs" />
     <Compile Include="Assets\Game\Scripts\MikroObjects\ExitDoor.cs" />
     <Compile Include="Assets\Game\Scripts\MikroObjects\Poduszka.cs" />
     <Compile Include="Assets\Game\Scripts\MikroObjects\Szuflada.cs" />
-    <Compile Include="Assets\Game\Scripts\PlayerMenager.cs" />
-    <Compile Include="Assets\Game\Scripts\StandingPoint.cs" />
-    <Compile Include="Assets\Game\Scripts\mickroObject.cs" />
+    <Compile Include="Assets\Game\Scripts\core\BigObject.cs" />
+    <Compile Include="Assets\Game\Scripts\core\DataPlayer.cs" />
+    <Compile Include="Assets\Game\Scripts\core\Inventory.cs" />
+    <Compile Include="Assets\Game\Scripts\core\Item.cs" />
+    <Compile Include="Assets\Game\Scripts\core\MakroItemMenager.cs" />
+    <Compile Include="Assets\Game\Scripts\core\PlayerMenager.cs" />
+    <Compile Include="Assets\Game\Scripts\core\StandingPoint.cs" />
+    <Compile Include="Assets\Game\Scripts\core\mickroObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
