@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Szuflada : mickroObject {
-
+   
     //protected override IEnumerator Action() { 
        // Debug.Log("Hi");
       //  yield return null;

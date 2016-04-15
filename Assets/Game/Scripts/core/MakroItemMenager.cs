@@ -57,7 +57,8 @@ public class MakroItemMenager : MonoBehaviour {
 
         playerPrevPos = player.transform.position;
         //player.transform.position = actualBigObj.playerPosition;
-        StartCoroutine(MovePlayer(actualBigObj.playerPosition));
+        Vector3 playerPos = new Vector3(actualBigObj.transform.position.x+actualBigObj.playerPosition.x, DataPlayer.playerHeight, actualBigObj.transform.position.z + actualBigObj.playerPosition.z);
+        StartCoroutine(MovePlayer(playerPos));
         
     }
 

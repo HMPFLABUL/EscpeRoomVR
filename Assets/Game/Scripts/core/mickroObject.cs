@@ -19,8 +19,9 @@ public abstract class mickroObject : MonoBehaviour {
 
     protected bool outOfAction;
 
-    protected void Start()
-    {
+    protected virtual void Start()
+    {  
+        movingDirVector = new Vector3(movingDirVector.x, movingDirVector.y, movingDirVector.z);
         startPos = gameObject.transform.position;
         endPos = startPos + movingDirVector;
         actPos = startPos;
