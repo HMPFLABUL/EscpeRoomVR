@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Szuflada : mickroObject {
    
+    protected override void Start()
+    {
+        movingDirVector = new Vector3(movingDirVector.x, movingDirVector.y, movingDirVector.z);
+        base.Start();
+    }
     //protected override IEnumerator Action() { 
        // Debug.Log("Hi");
       //  yield return null;

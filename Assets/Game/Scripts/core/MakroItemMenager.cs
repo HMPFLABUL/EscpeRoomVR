@@ -72,9 +72,15 @@ public class MakroItemMenager : MonoBehaviour {
         }
         foreach (BigObject obj in makroObjects)
         {
-            
+            DataPlayer.StandingPoints temp = DataPlayer.playerActPoint;
             // do whatever with child transform here
-            obj.GetComponent<Collider>().enabled = true;
+            foreach (DataPlayer.StandingPoints pt in obj.avaiblePoints)
+            {
+                if (temp != pt)
+                    obj.GetComponent<Collider>().enabled = false;
+                else
+                    obj.GetComponent<Collider>().enabled = true;
+            }
 
         }
         foreach (StandingPoint obj in standingObjects)

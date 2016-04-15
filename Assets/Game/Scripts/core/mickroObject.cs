@@ -3,7 +3,7 @@ using System.Collections;
 
 public abstract class mickroObject : MonoBehaviour {
 
-   
+
     [SerializeField]
     Item key;
     [SerializeField]
@@ -20,9 +20,10 @@ public abstract class mickroObject : MonoBehaviour {
     protected bool outOfAction;
 
     protected virtual void Start()
-    {  
-        movingDirVector = new Vector3(movingDirVector.x, movingDirVector.y, movingDirVector.z);
-        startPos = gameObject.transform.position;
+    {
+        
+        Debug.Log(movingDirVector);
+        startPos = gameObject.transform.localPosition;
         endPos = startPos + movingDirVector;
         actPos = startPos;
         outOfAction = true;
@@ -71,8 +72,9 @@ public abstract class mickroObject : MonoBehaviour {
         outOfAction = false;
         while (actPos != endPos)
         {
+
             actPos = Vector3.MoveTowards(actPos, endPos, 1f * Time.deltaTime);
-            gameObject.transform.position = actPos;
+            gameObject.transform.localPosition = actPos;
             yield return null;
         }
         yield return StartCoroutine(MoveObjBack());
@@ -83,7 +85,7 @@ public abstract class mickroObject : MonoBehaviour {
         while (actPos != startPos)
         {
             actPos = Vector3.MoveTowards(actPos, startPos, 1f * Time.deltaTime);
-            gameObject.transform.position = actPos;
+            gameObject.transform.localPosition = actPos;
             yield return null;
         }
         outOfAction = true;

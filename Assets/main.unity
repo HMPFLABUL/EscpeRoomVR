@@ -1328,7 +1328,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 80be5d9a505df2f48a1edfe27c6522c4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.17364822
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 80be5d9a505df2f48a1edfe27c6522c4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1336,7 +1336,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 80be5d9a505df2f48a1edfe27c6522c4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 80be5d9a505df2f48a1edfe27c6522c4, type: 3}
       propertyPath: m_RootOrder
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 0}
   locked: 0
-  movingDirVector: {x: 0, y: 0, z: -0.3}
+  movingDirVector: {x: 0.0005, y: 0, z: -0.25}
   movable: 1
 --- !u!114 &426657287
 MonoBehaviour:
