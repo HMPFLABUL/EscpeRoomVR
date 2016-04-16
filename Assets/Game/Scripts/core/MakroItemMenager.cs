@@ -57,7 +57,8 @@ public class MakroItemMenager : MonoBehaviour {
 
         playerPrevPos = player.transform.position;
         //player.transform.position = actualBigObj.playerPosition;
-        StartCoroutine(MovePlayer(actualBigObj.playerPosition));
+        Vector3 playerPos = new Vector3(actualBigObj.transform.position.x+actualBigObj.playerPosition.x, DataPlayer.playerHeight, actualBigObj.transform.position.z + actualBigObj.playerPosition.z);
+        StartCoroutine(MovePlayer(playerPos));
         
     }
 
@@ -71,9 +72,15 @@ public class MakroItemMenager : MonoBehaviour {
         }
         foreach (BigObject obj in makroObjects)
         {
-            
+            DataPlayer.StandingPoints temp = DataPlayer.playerActPoint;
             // do whatever with child transform here
-            obj.GetComponent<Collider>().enabled = true;
+            foreach (DataPlayer.StandingPoints pt in obj.avaiblePoints)
+            {
+                if (temp != pt)
+                    obj.GetComponent<Collider>().enabled = false;
+                else
+                    obj.GetComponent<Collider>().enabled = true;
+            }
 
         }
         foreach (StandingPoint obj in standingObjects)
